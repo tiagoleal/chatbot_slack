@@ -13,6 +13,7 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (9.0.0)
+    ast (2.4.0)
     bond (0.5.1)
     concurrent-ruby (1.1.4)
     database_cleaner (1.7.0)
@@ -22,18 +23,24 @@ GEM
     ffaker (2.10.0)
     i18n (1.5.2)
       concurrent-ruby (~> 1.0)
+    jaro_winkler (1.5.2)
     minitest (5.11.3)
     mustermann (1.0.3)
+    parallel (1.13.0)
+    parser (2.6.0.0)
+      ast (~> 2.4.0)
     pg (1.1.4)
     pg_search (2.0.1)
       activerecord (>= 4.2)
       activesupport (>= 4.2)
       arel (>= 6)
+    powerpack (0.1.2)
     rack (2.0.6)
     rack-protection (2.0.5)
       rack
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
+    rainbow (3.0.0)
     rake (12.3.2)
     ripl (0.7.1)
       bond (~> 0.5.1)
@@ -56,6 +63,15 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.8.0)
     rspec-support (3.8.0)
+    rubocop (0.63.1)
+      jaro_winkler (~> 1.5.1)
+      parallel (~> 1.10)
+      parser (>= 2.5, != 2.5.1.1)
+      powerpack (~> 0.1)
+      rainbow (>= 2.2.2, < 4.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (~> 1.4.0)
+    ruby-progressbar (1.10.0)
     sinatra (2.0.5)
       mustermann (~> 1.0)
       rack (~> 2.0)
@@ -73,6 +89,7 @@ GEM
       sinatra (>= 1.2.1)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
+    unicode-display_width (1.4.1)
 
 PLATFORMS
   ruby
@@ -87,6 +104,7 @@ DEPENDENCIES
   rack-test
   rake
   rspec
+  rubocop
   sinatra
   sinatra-activerecord
   tux
