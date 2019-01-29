@@ -2,10 +2,10 @@ module MessageModule
   class CreateService
     def initialize(params)
       @description = params["description"]
-      @language_src = params["language"]
-      @language_dst = "pt"
-      if @language_src == "pt"
-        @language_dst = "eng"
+      @language_dst = params["language"]
+      @language_src = "pt"
+      if @language_dst == "pt"
+        @language_src = "eng"
       end
     end
 
@@ -19,7 +19,7 @@ module MessageModule
         response += "`#{traducao}`\n"
         language = "#{@language_src} - #{@language_dst}"
         Message.create(description: response, language: language)
-        return response 
+        response 
       end
       "created successfully!" 
     end
