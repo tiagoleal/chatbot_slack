@@ -1,5 +1,5 @@
 require 'spec_helper'
-require './app/services/translate_service_yandex'
+require './app/services/message/translate_service_yandex'
 
 describe "translate message" do
   before do 

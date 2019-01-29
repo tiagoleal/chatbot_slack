@@ -2,10 +2,8 @@ require_relative './../../spec_helper.rb'
 
 describe MessageModule::CreateService do
   before do
-    index = rand(0..1)
-    lang = ["pt-br","eng"]
     @description = FFaker::Lorem.sentence 
-    @language = lang[index]
+    @language = "en"
   end
 
   describe "#call" do 
