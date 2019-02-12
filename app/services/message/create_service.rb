@@ -21,7 +21,6 @@ module MessageModule
         Message.create(description: response, language: language)
         return response 
       end
-      "created successfully!" 
     end
   end
 end

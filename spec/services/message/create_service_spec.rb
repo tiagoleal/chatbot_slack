@@ -21,10 +21,6 @@ describe MessageModule::CreateService do
         @response = @createService.call()
       end
 
-      it "Receive success message" do
-        expect(@response).to match("created successfully!")
-      end
-
       it "Question and anwser is present in database" do
         expect(Message.last.description).to match(@description)
         expect(Message.last.language).to match(@language)
