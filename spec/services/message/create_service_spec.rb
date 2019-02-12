@@ -2,7 +2,7 @@ require_relative './../../spec_helper.rb'
 
 describe MessageModule::CreateService do
   before do
-    @description = FFaker::Lorem.sentence 
+    @description = "teste" 
     @language = "en"
   end
 

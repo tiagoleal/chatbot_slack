@@ -5,7 +5,7 @@ module MessageModule
       @language_dst = params["language"]
       @language_src = "pt"
       if @language_dst == "pt"
-        @language_src = "eng"
+        @language_src = "en"
       end
     end
 
@@ -18,6 +18,7 @@ module MessageModule
         response += "*Mensagem traduzida: #{@language_dst}* \n\n"  
         response += "`#{traducao}`\n"
         language = "#{@language_src} - #{@language_dst}"
+        # puts "traducao:"+response+ " language: "+language
         Message.create(description: response, language: language)
         response 
       end
