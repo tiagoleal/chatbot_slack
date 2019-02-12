@@ -18,9 +18,8 @@ module MessageModule
         response += "*Mensagem traduzida: #{@language_dst}* \n\n"  
         response += "`#{traducao}`\n"
         language = "#{@language_src} - #{@language_dst}"
-        # puts "traducao:"+response+ " language: "+language
         Message.create(description: response, language: language)
-        response 
+        return response 
       end
       "created successfully!" 
     end
