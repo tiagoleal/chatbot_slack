@@ -10,8 +10,6 @@ class HelpService
     response += "`Remove uma mensagem baseada no ID dela`\n\n"
     response += "listagem\n"
     response += "`Mostra a lista de mensagens`\n\n"
-    response += "`Traduza a mensagem x de inglês para português`\n"
-    response += "`Como se fala x em inglês`\n\n"
     response
   end
 end
